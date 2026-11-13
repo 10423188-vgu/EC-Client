@@ -1,0 +1,11 @@
+.confirm-dialog__message {
+  color: var(--color-text-on-surface-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.confirm-dialog__footer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}

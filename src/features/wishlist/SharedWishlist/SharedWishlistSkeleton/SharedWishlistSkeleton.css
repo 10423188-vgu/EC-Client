@@ -1,0 +1,47 @@
+.shared-wishlist-skeleton__card {
+  align-items: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  min-width: 0;
+  padding: 14px;
+}
+
+.shared-wishlist-skeleton__image {
+  flex: 0 0 70px;
+  height: 70px;
+}
+
+.shared-wishlist-skeleton__info {
+  display: grid;
+  flex: 1;
+  gap: 8px;
+  min-width: 0;
+}
+
+.shared-wishlist-skeleton__name {
+  height: 14px;
+  width: 94%;
+}
+
+.shared-wishlist-skeleton__name--short {
+  width: 62%;
+}
+
+.shared-wishlist-skeleton__price {
+  height: 18px;
+  width: 44%;
+}
+
+.shared-wishlist-skeleton__pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.shared-wishlist-skeleton__pagination .skeleton {
+  height: 32px;
+  width: 32px;
+}

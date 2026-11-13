@@ -1,0 +1,78 @@
+.retry-button {
+  align-items: center;
+  background: var(--color-primary-subtle);
+  border: 1px solid var(--color-primary-subtle-border);
+  border-radius: 999px;
+  color: var(--color-text);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 7px;
+  justify-content: center;
+  letter-spacing: 0.2px;
+  margin-top: 12px;
+  min-height: 40px;
+  min-width: 120px;
+  padding: 0 20px;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease;
+}
+
+.retry-button::before {
+  content: '↻';
+  font-size: 17px;
+  line-height: 1;
+  transition: transform 300ms ease;
+}
+
+.retry-button:hover {
+  background: var(--color-surface-opaque-hover);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px var(--black-20);
+  color: var(--color-primary-hover);
+}
+
+.retry-button:hover::before {
+  transform: rotate(180deg);
+}
+
+.retry-button:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.retry-button:active {
+  background: var(--color-primary-subtle);
+  box-shadow: 0 2px 6px var(--black-20);
+}
+
+.retry-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.retry-button:disabled:not(.retry-button--loading) {
+  cursor: not-allowed;
+}
+
+.retry-button--loading::before {
+  animation: retry-button-spin 900ms linear infinite;
+}
+
+@keyframes retry-button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .retry-button,
+  .retry-button::before {
+    animation: none;
+    transition: none;
+  }
+}

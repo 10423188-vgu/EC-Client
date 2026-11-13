@@ -1,0 +1,32 @@
+.popover-panel {
+  background: var(--color-surface-opaque);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 20px 56px var(--black-70);
+}
+
+.popover-panel--arrow-top::before {
+  background: var(--color-surface-opaque);
+  border-left: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
+  content: '';
+  height: 16px;
+  position: absolute;
+  right: 18px;
+  top: -8px;
+  transform: rotate(45deg);
+  width: 16px;
+}
+
+.popover-panel--arrow-bottom::before {
+  background: var(--color-surface-opaque);
+  border-bottom: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  bottom: -8px;
+  content: '';
+  height: 16px;
+  position: absolute;
+  right: 7px;
+  transform: rotate(45deg);
+  width: 16px;
+}

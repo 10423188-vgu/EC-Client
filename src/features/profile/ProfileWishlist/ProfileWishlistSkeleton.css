@@ -1,0 +1,130 @@
+.profile-wishlist-skeleton__controls-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-wishlist-skeleton__controls-title {
+  border-radius: 4px;
+  height: 18px;
+  width: 140px;
+}
+
+.profile-wishlist-skeleton__controls-description {
+  border-radius: 3px;
+  height: 12px;
+  width: 290px;
+}
+
+.profile-wishlist-skeleton__controls-alert {
+  border-radius: 3px;
+  height: 12px;
+  margin-top: 8px;
+  width: 250px;
+}
+
+.profile-wishlist-skeleton__sharing {
+  display: grid;
+  gap: 10px;
+  justify-items: end;
+  width: 320px;
+}
+
+.profile-wishlist-skeleton__share-link {
+  border-radius: 6px;
+  height: 36px;
+  width: 100%;
+}
+
+.profile-wishlist-skeleton__share-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.profile-wishlist-skeleton__share-button {
+  border-radius: 5px;
+  height: 42px;
+  width: 104px;
+}
+
+.profile-wishlist-skeleton__share-button--secondary {
+  width: 126px;
+}
+
+.profile-wishlist-skeleton__item {
+  align-items: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  display: flex;
+  gap: 12px;
+  padding: 14px;
+}
+
+.profile-wishlist-skeleton__actions {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 16px;
+}
+
+.profile-wishlist-skeleton__count {
+  border-radius: 4px;
+  height: 14px;
+  width: 112px;
+}
+
+.profile-wishlist-skeleton__clear {
+  border-radius: 50%;
+  height: 38px;
+  width: 38px;
+}
+
+.profile-wishlist-skeleton__image {
+  border-radius: 8px;
+  flex-shrink: 0;
+  height: 70px;
+  width: 70px;
+}
+
+.profile-wishlist-skeleton__info {
+  display: grid;
+  flex: 1;
+  gap: 8px;
+  min-width: 0;
+}
+
+.profile-wishlist-skeleton__name {
+  border-radius: 4px;
+  height: 12px;
+}
+
+.profile-wishlist-skeleton__name--short {
+  width: 55%;
+}
+
+.profile-wishlist-skeleton__price {
+  border-radius: 4px;
+  height: 14px;
+  width: 90px;
+}
+
+.profile-wishlist-skeleton__button {
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: 32px;
+  width: 32px;
+}
+
+.profile-wishlist-skeleton__pagination {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.profile-wishlist-skeleton__page {
+  border-radius: 6px;
+  height: 36px;
+  width: 36px;
+}

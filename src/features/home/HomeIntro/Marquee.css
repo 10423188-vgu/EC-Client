@@ -1,0 +1,40 @@
+.marquee {
+  align-items: center;
+  display: flex;
+  height: 88px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+  overflow: hidden;
+}
+
+.marquee__track {
+  align-items: center;
+  display: inline-flex;
+  will-change: transform;
+}
+
+.marquee__item {
+  align-items: center;
+  color: var(--white-12);
+  display: flex;
+  font-size: 44px;
+  justify-content: center;
+  padding: 0 44px;
+  transition: color 300ms ease;
+}
+
+.marquee__item:hover {
+  color: var(--white-48);
+}

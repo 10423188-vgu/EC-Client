@@ -1,0 +1,40 @@
+.star-rating {
+  align-items: center;
+  display: inline-flex;
+  gap: 2px;
+}
+
+.star-rating__icon--filled {
+  color: var(--rating-5);
+}
+
+.star-rating__icon--empty {
+  color: var(--white-20);
+}
+
+.star-picker {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.star-picker__rating-button {
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+  transition: transform 100ms;
+}
+
+.star-picker__rating-button:hover {
+  transform: scale(1.15);
+}
+
+.star-picker__icon--active {
+  color: var(--rating-5);
+}
+
+.star-picker__icon--inactive {
+  color: var(--white-20);
+}

@@ -1,0 +1,196 @@
+.dashboard-overview {
+  min-width: 0;
+}
+
+.dashboard-overview__header {
+  align-items: end;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.dashboard-overview__period {
+  flex-shrink: 0;
+  min-width: 165px;
+}
+
+.dashboard-overview__kpis {
+  display: grid;
+  gap: 16px;
+  grid-area: kpis;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.dashboard-overview__kpi {
+  background: var(--color-surface-cream);
+  border: 1px solid var(--color-border-cream);
+  border-radius: 12px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: auto minmax(0, 1fr);
+  min-width: 0;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+  transition:
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+.dashboard-overview__kpi::before {
+  background: linear-gradient(90deg, var(--gradient-panel-accent-stops));
+  border-radius: 12px 12px 0 0;
+  content: '';
+  height: 2px;
+  left: 0;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  transition:
+    opacity 200ms ease,
+    width 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  width: 70%;
+}
+
+.dashboard-overview__kpi:hover {
+  border-color: var(--color-border-cream-hover);
+  transform: translateY(-2px);
+}
+
+.dashboard-overview__kpi:hover::before {
+  opacity: 1;
+  width: 100%;
+}
+
+.dashboard-overview__kpi-icon {
+  color: var(--color-primary-hover);
+  font-size: 25px;
+  grid-row: 1;
+}
+
+.dashboard-overview__kpi-value {
+  color: var(--color-price);
+  font-size: clamp(18px, 1.7vw, 26px);
+  grid-column: 2;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.dashboard-overview__kpi-label {
+  color: var(--color-text);
+  font-size: 12px;
+  grid-column: 1 / -1;
+  margin: 6px 0 0;
+}
+
+.dashboard-overview__kpi-detail {
+  color: var(--color-text-muted);
+  font-size: 11px;
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.dashboard-overview .analytics-workspace__content {
+  grid-template-areas:
+    'kpis kpis kpis kpis'
+    'trends trends trends trends'
+    'orders orders orders orders';
+}
+
+.dashboard-overview__orders {
+  grid-area: orders;
+}
+
+.dashboard-overview .orders-workspace__table {
+  min-width: 1040px;
+}
+
+.dashboard-overview .orders-workspace__table th:nth-child(1) {
+  width: 15%;
+}
+
+.dashboard-overview .orders-workspace__table th:nth-child(2) {
+  width: 24%;
+}
+
+.dashboard-overview .orders-workspace__table th:nth-child(3) {
+  width: 16%;
+}
+
+.dashboard-overview .orders-workspace__table th:nth-child(4) {
+  width: 15%;
+}
+
+.dashboard-overview .orders-workspace__table th:nth-child(5) {
+  width: 8%;
+}
+
+.dashboard-overview .orders-workspace__table th:nth-child(6) {
+  width: 13%;
+}
+
+.dashboard-overview .orders-workspace__table th:nth-child(7) {
+  width: 9%;
+}
+
+.dashboard-overview .orders-workspace__table th:last-child {
+  text-align: left;
+}
+
+.dashboard-overview .orders-workspace__table td:last-child {
+  padding-right: 8px;
+}
+
+.dashboard-overview__trends {
+  grid-area: trends;
+}
+
+.dashboard-overview__legend-dot {
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+}
+
+.dashboard-overview__legend-dot--collected {
+  background: var(--color-primary-hover);
+}
+
+.dashboard-overview__legend-dot--refunded {
+  background: var(--color-price-sale);
+}
+
+.dashboard-overview__state {
+  align-items: center;
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  min-height: 120px;
+  text-align: center;
+}
+
+.dashboard-overview__state .retry-button {
+  margin-top: 0;
+}
+
+.dashboard-overview__state p {
+  margin: 0;
+}
+
+.dashboard-overview__state--analytics {
+  grid-column: 1 / -1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-overview__kpi,
+  .dashboard-overview__kpi::before {
+    transition: none;
+  }
+
+  .dashboard-overview__kpi:hover {
+    transform: none;
+  }
+}

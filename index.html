@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- why: a reset-password link carries the token as a query param — no-referrer
+    prevents any page on this site from leaking it via the Referer header to third-party
+    resources (fonts, images, analytics) it loads -->
+    <meta name="referrer" content="no-referrer" />
+    <title>client</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

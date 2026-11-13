@@ -1,0 +1,42 @@
+.upload-crop {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.upload-crop__canvas {
+  background: black;
+  border-radius: 12px;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.upload-crop__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-crop__control {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+.upload-crop__control-label {
+  color: var(--white-48);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  min-width: 48px;
+  text-transform: uppercase;
+}
+
+.upload-crop__slider {
+  accent-color: var(--purple);
+  cursor: pointer;
+  flex: 1;
+  height: 4px;
+}

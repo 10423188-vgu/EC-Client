@@ -1,0 +1,71 @@
+.dashboard-skeleton__coupons {
+  display: grid;
+  gap: 14px;
+}
+
+.dashboard-skeleton__coupons .dashboard-skeleton__toolbar {
+  justify-content: flex-end;
+  margin-bottom: 6px;
+}
+
+.dashboard-skeleton__coupon-filters {
+  display: grid;
+  gap: 9px;
+  grid-template-columns: repeat(2, minmax(140px, 220px));
+}
+
+.dashboard-skeleton__coupon-notice .dashboard-skeleton__line {
+  height: 11px;
+  max-width: 760px;
+  width: 75%;
+}
+
+.dashboard-skeleton__coupons .dashboard-skeleton__summary {
+  justify-content: flex-end;
+}
+
+.dashboard-skeleton__coupon-scroll {
+  overflow-x: auto;
+}
+
+.dashboard-skeleton__coupon-row {
+  align-items: center;
+  background: var(--color-surface-cream);
+  border-radius: 7px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns:
+    minmax(210px, 1.8fr) minmax(130px, 1.2fr) minmax(100px, 1fr)
+    105px 120px 136px;
+  margin-top: 6px;
+  min-height: 56px;
+  padding: 0 10px;
+}
+
+.dashboard-skeleton__coupon-row--head {
+  background: transparent;
+  min-height: 32px;
+}
+
+.dashboard-skeleton__coupon-identity,
+.dashboard-skeleton__coupon-actions {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.dashboard-skeleton__coupon-initial {
+  flex-shrink: 0;
+  height: 36px;
+  width: 36px;
+}
+
+.dashboard-skeleton__coupon-action {
+  flex-shrink: 0;
+  height: 28px;
+  width: 28px;
+}
+
+.dashboard-skeleton__coupon-row .dashboard-skeleton__table-cell {
+  height: 16px;
+}

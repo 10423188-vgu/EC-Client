@@ -1,0 +1,60 @@
+.step-indicator {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.step-indicator__step {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.step-indicator__step:not(:last-child)::after {
+  background: rgba(from var(--color-step-text) r g b / 0.16);
+  content: '';
+  height: 1px;
+  margin: 0 16px;
+  width: 56px;
+}
+
+.step-indicator__step--done:not(:last-child)::after {
+  background: var(--color-primary);
+}
+
+.step-indicator__dot {
+  align-items: center;
+  border: 1px solid rgba(from var(--color-step-text) r g b / 0.24);
+  border-radius: 50%;
+  color: rgba(from var(--color-step-text) r g b / 0.5);
+  display: flex;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 700;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+
+.step-indicator__step--done .step-indicator__dot {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+.step-indicator__step--active .step-indicator__dot {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.step-indicator__label {
+  color: rgba(from var(--color-step-text) r g b / 0.5);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.step-indicator__step--done .step-indicator__label,
+.step-indicator__step--active .step-indicator__label {
+  color: var(--color-step-text);
+}

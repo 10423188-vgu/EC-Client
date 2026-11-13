@@ -1,0 +1,23 @@
+.payment-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 80px 20px 40px;
+}
+
+.payment-card {
+  background: var(--color-surface-cream);
+  border: 1px solid var(--color-border-cream);
+  border-radius: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.payment-notice {
+  background: rgba(from var(--warning) r g b / 0.1);
+  border: 1px solid rgba(from var(--warning) r g b / 0.3);
+  border-radius: 10px;
+  text-align: left;
+}

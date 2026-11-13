@@ -1,0 +1,138 @@
+.order-detail-skeleton__line {
+  display: block;
+}
+
+.order-detail-skeleton__back {
+  height: 16px;
+  margin-bottom: 14px;
+  width: 94px;
+}
+
+.order-detail-skeleton__title {
+  height: 29px;
+  width: 230px;
+}
+
+.order-detail-skeleton__status {
+  border-radius: 999px;
+  height: 26px;
+  width: 92px;
+}
+
+.order-detail-skeleton__date {
+  height: 15px;
+  margin-top: 9px;
+  width: 180px;
+}
+
+.order-detail-skeleton__section-title {
+  height: 19px;
+  margin-bottom: 14px;
+  width: 130px;
+}
+
+.order-detail-skeleton__progress-step {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-detail-skeleton__progress-marker {
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+}
+
+.order-detail-skeleton__progress-label {
+  height: 12px;
+  width: 80%;
+}
+
+.order-detail-skeleton__item-image {
+  flex-shrink: 0;
+  height: 56px;
+  width: 56px;
+}
+
+.order-detail-skeleton__item-copy {
+  display: grid;
+  flex: 1;
+  gap: 7px;
+  min-width: 0;
+}
+
+.order-detail-skeleton__item-name {
+  height: 15px;
+  width: 75%;
+}
+
+.order-detail-skeleton__item-meta {
+  height: 13px;
+  width: 55%;
+}
+
+.order-detail-skeleton__item-price {
+  display: grid;
+  gap: 6px;
+  justify-items: end;
+  width: 92px;
+}
+
+.order-detail-skeleton__item-price .order-detail-skeleton__line {
+  height: 13px;
+  width: 100%;
+}
+
+.order-detail-skeleton__address .address-card__body {
+  width: 100%;
+}
+
+.order-detail-skeleton__address-title {
+  height: 12px;
+  width: 110px;
+}
+
+.order-detail-skeleton__address-name {
+  height: 15px;
+  width: 150px;
+}
+
+.order-detail-skeleton__address-phone {
+  height: 15px;
+  width: 115px;
+}
+
+.order-detail-skeleton__address-line {
+  height: 13px;
+  width: 78%;
+}
+
+.order-detail-skeleton .order-detail__map {
+  border: 0;
+}
+
+.order-detail-skeleton__payment-line {
+  height: 17px;
+  width: 160px;
+}
+
+.order-detail-skeleton__payment-date {
+  height: 14px;
+  margin-top: 10px;
+  width: 210px;
+}
+
+.order-detail-skeleton__total-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-detail-skeleton__total-row .order-detail-skeleton__line {
+  height: 15px;
+  width: 74px;
+}
+
+.order-detail-skeleton .order-detail-section {
+  animation: none;
+}

@@ -1,0 +1,63 @@
+.order-status-confirm {
+  display: grid;
+  gap: 14px;
+}
+
+.order-status-confirm__eyebrow {
+  color: var(--color-text-on-surface-subtle);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.order-status-confirm__message {
+  color: var(--color-text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.order-status-confirm__reason {
+  display: grid;
+  gap: 7px;
+}
+
+.order-status-confirm__reason span {
+  color: var(--color-text-on-surface-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.order-status-confirm__reason textarea {
+  background: var(--color-surface-cream);
+  border: 1px solid var(--color-border-cream);
+  border-radius: 8px;
+  color: var(--color-text);
+  font: inherit;
+  font-size: 12px;
+  min-height: 76px;
+  outline: 0;
+  padding: 10px;
+  resize: vertical;
+}
+
+.order-status-confirm__reason textarea:focus {
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+}
+
+.order-status-confirm__notice {
+  background: var(--color-surface-cream);
+  border: 1px solid var(--color-border-cream);
+  border-radius: 8px;
+  color: var(--color-text-on-surface-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+.order-status-confirm__actions {
+  display: flex;
+  gap: 9px;
+  justify-content: flex-end;
+  padding-top: 4px;
+}

@@ -1,0 +1,24 @@
+.profile-about {
+  margin: 28px auto 0;
+  max-width: 1280px;
+}
+
+.profile-about__grid {
+  display: grid;
+  gap: 16px;
+}
+
+.profile-about__grid--two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.profile-about__divider {
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--white-08) 20%,
+    var(--white-08) 80%,
+    transparent
+  );
+  height: 1px;
+}

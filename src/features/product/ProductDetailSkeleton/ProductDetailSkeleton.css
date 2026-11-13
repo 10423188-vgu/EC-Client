@@ -1,0 +1,145 @@
+.product-detail-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.product-detail-skeleton__breadcrumb {
+  border-radius: 10px;
+  height: 36px;
+}
+
+.product-detail-skeleton__gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  width: 100%;
+}
+
+.product-detail-skeleton__thumbnails {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 25px;
+  height: 545px;
+  padding-top: 20px;
+  width: 84px;
+}
+
+.product-detail-skeleton__thumbnail {
+  border-radius: 6px;
+  flex-shrink: 0;
+  height: 84px;
+  width: 68px;
+}
+
+.product-detail-skeleton__thumbnail--active {
+  height: 104px;
+  width: 84px;
+}
+
+.product-detail-skeleton__image-primary {
+  aspect-ratio: 1;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.product-detail-skeleton__info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.product-detail-skeleton__meta {
+  border-radius: 4px;
+  height: 12px;
+  width: 140px;
+}
+
+.product-detail-skeleton__name {
+  border-radius: 6px;
+  height: 58px;
+  width: 85%;
+}
+
+.product-detail-skeleton__price {
+  border-radius: 4px;
+  height: 28px;
+  width: 170px;
+}
+
+.product-detail-skeleton__details {
+  border-top: 1px solid var(--white-08);
+  padding-top: 16px;
+}
+
+.product-detail-skeleton__details-toggle {
+  border-radius: 4px;
+  height: 11px;
+  width: 160px;
+}
+
+.product-detail-skeleton__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.product-detail-skeleton__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-detail-skeleton__field-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-detail-skeleton__label {
+  border-radius: 4px;
+  height: 10px;
+  width: 60px;
+}
+
+.product-detail-skeleton__label-value {
+  border-radius: 4px;
+  height: 10px;
+  width: 80px;
+}
+
+.product-detail-skeleton__stock {
+  border-radius: 4px;
+  height: 10px;
+  width: 90px;
+}
+
+.product-detail-skeleton__variant-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.product-detail-skeleton__variant {
+  border-radius: 4px;
+  height: 36px;
+  width: 80px;
+}
+
+.product-detail-skeleton__quantity {
+  border-radius: 999px;
+  height: 44px;
+  width: 146px;
+}
+
+.product-detail-skeleton__buttons {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.product-detail-skeleton__button {
+  border-radius: 4px;
+  height: 46px;
+}

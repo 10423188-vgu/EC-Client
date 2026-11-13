@@ -1,0 +1,119 @@
+.tooltip__wrapper {
+  display: inline-flex;
+  position: relative;
+}
+
+.tooltip__surface {
+  background: linear-gradient(
+    135deg,
+    var(--color-surface-opaque),
+    var(--color-primary-subtle)
+  );
+  border: 1px solid var(--color-primary-subtle-border);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+  color: var(--white);
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+.tooltip__surface--animated {
+  animation: tooltip-enter 180ms ease-out both;
+}
+
+.tooltip__title {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.tooltip__rows {
+  display: grid;
+  gap: 7px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tooltip__row {
+  align-items: center;
+  display: grid;
+  font-size: 11px;
+  gap: 8px;
+  grid-template-columns: 7px 1fr auto;
+}
+
+.tooltip__row b {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.tooltip__marker {
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+}
+
+.tooltip__bubble {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition:
+    opacity 250ms ease,
+    top 250ms ease,
+    transform 250ms ease,
+    visibility 250ms ease;
+  visibility: hidden;
+  white-space: nowrap;
+  z-index: var(--z-local-dropdown);
+}
+
+.tooltip__bubble--top {
+  left: 50%;
+  top: -30px;
+  transform: translate(-50%, 6px);
+}
+
+.tooltip__bubble--left {
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translate(-6px, -50%);
+}
+
+.tooltip__wrapper:hover > .tooltip__bubble,
+.tooltip__wrapper:focus-within > .tooltip__bubble {
+  opacity: 1;
+  transform: translate(0, 0);
+  visibility: visible;
+}
+
+.tooltip__wrapper:hover > .tooltip__bubble--top,
+.tooltip__wrapper:focus-within > .tooltip__bubble--top {
+  top: -45px;
+  transform: translate(-50%, 6px);
+}
+
+.tooltip__wrapper:hover > .tooltip__bubble--left,
+.tooltip__wrapper:focus-within > .tooltip__bubble--left {
+  transform: translate(0, -50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tooltip__bubble,
+  .tooltip__surface--animated {
+    animation: none;
+    transition: none;
+  }
+}
+
+@keyframes tooltip-enter {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

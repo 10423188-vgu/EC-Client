@@ -1,0 +1,308 @@
+.dashboard-skeleton__orders-layout {
+  align-items: start;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1fr) 280px;
+}
+
+.dashboard-skeleton__order-overview {
+  border-radius: 12px;
+  display: block;
+  padding: 18px;
+}
+
+.dashboard-skeleton__orders-table {
+  min-width: 1120px;
+  width: 100%;
+}
+
+.dashboard-skeleton__orders-table .dashboard-skeleton__table-head,
+.dashboard-skeleton__orders-table .dashboard-skeleton__table-row {
+  grid-template-columns:
+    36px minmax(100px, 0.72fr) minmax(150px, 0.96fr)
+    minmax(110px, 0.6fr) minmax(100px, 0.66fr) minmax(55px, 0.3fr)
+    minmax(115px, 0.78fr) minmax(90px, 0.48fr) minmax(130px, 1.26fr);
+}
+
+.dashboard-skeleton__orders-table .dashboard-skeleton__table-head {
+  border-bottom: 0;
+  min-height: 28px;
+}
+
+.dashboard-skeleton__orders-table .dashboard-skeleton__table-row {
+  background: var(--color-surface-cream);
+  border-radius: 7px;
+  border-top: 0;
+  margin-top: 5px;
+  min-height: 46px;
+}
+
+.dashboard-skeleton__orders-table
+  .dashboard-skeleton__table-row
+  + .dashboard-skeleton__table-row {
+  margin-top: 5px;
+}
+
+.dashboard-skeleton__order-summary {
+  margin-bottom: 12px;
+}
+
+.dashboard-skeleton__order-summary .dashboard-skeleton__block {
+  margin-left: auto;
+}
+
+.dashboard-skeleton__order-select {
+  height: 14px;
+  width: 14px;
+}
+
+.dashboard-skeleton__order-customer,
+.dashboard-skeleton__order-payment {
+  gap: 2px;
+}
+
+.dashboard-skeleton__order-customer .dashboard-skeleton__line:first-child {
+  height: 12px;
+  width: 86%;
+}
+
+.dashboard-skeleton__order-customer .dashboard-skeleton__line:last-child {
+  height: 11px;
+  width: 72%;
+}
+
+.dashboard-skeleton__order-payment .dashboard-skeleton__line:first-child {
+  height: 12px;
+  width: 82%;
+}
+
+.dashboard-skeleton__order-payment .dashboard-skeleton__line:last-child {
+  height: 10px;
+  width: 68%;
+}
+
+.dashboard-skeleton__order-actions {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.dashboard-skeleton__order-actions .dashboard-skeleton__block {
+  height: 29px;
+  width: 50px;
+}
+
+.dashboard-skeleton__order-actions .dashboard-skeleton__block:last-child {
+  height: 28px;
+  width: 28px;
+}
+
+.dashboard-skeleton__order-chart {
+  align-items: center;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  margin-top: 5px;
+  position: relative;
+}
+
+.dashboard-skeleton__order-donut {
+  align-items: center;
+  aspect-ratio: 1;
+  border: 14px solid var(--color-surface-hover);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  max-width: 130px;
+  width: 100%;
+}
+
+.dashboard-skeleton__order-legend {
+  display: grid;
+  gap: 7px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dashboard-skeleton__order-legend-item {
+  align-items: center;
+  background: var(--white-04);
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 7px 8px;
+}
+
+.dashboard-skeleton__order-section {
+  border-top: 1px solid var(--color-border);
+  display: grid;
+  gap: 9px;
+  margin-top: 18px;
+  padding-top: 15px;
+}
+
+.dashboard-skeleton__order-status-group {
+  display: grid;
+  gap: 9px;
+}
+
+.dashboard-skeleton__order-status-group
+  + .dashboard-skeleton__order-status-group {
+  border-top: 1px solid var(--color-border);
+  margin-top: 3px;
+  padding-top: 11px;
+}
+
+.dashboard-skeleton__order-status {
+  display: grid;
+  gap: 5px;
+}
+
+.dashboard-skeleton__order-track {
+  background: var(--color-surface-hover);
+  border-radius: 99px;
+  height: 6px;
+}
+
+.dashboard-skeleton__order-metrics {
+  display: grid;
+  gap: 13px 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dashboard-skeleton__order-metric {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.dashboard-skeleton__order-overview-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-skeleton__order-overview-header .dashboard-skeleton__line--title {
+  height: 12px;
+  width: 106px;
+}
+
+.dashboard-skeleton__order-overview-header .dashboard-skeleton__line--short {
+  height: 10px;
+  width: 70px;
+}
+
+.dashboard-skeleton__order-donut .dashboard-skeleton__lines {
+  justify-items: center;
+}
+
+.dashboard-skeleton__order-donut .dashboard-skeleton__line:first-child {
+  height: 20px;
+  width: 52px;
+}
+
+.dashboard-skeleton__order-donut .dashboard-skeleton__line:last-child {
+  height: 10px;
+  width: 64px;
+}
+
+.dashboard-skeleton__order-legend-label,
+.dashboard-skeleton__order-status-label {
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  min-width: 0;
+}
+
+.dashboard-skeleton__order-dot {
+  border-radius: 50%;
+  flex: 0 0 6px;
+  height: 6px;
+}
+
+.dashboard-skeleton__order-legend-label .dashboard-skeleton__line {
+  height: 9px;
+  width: 70px;
+}
+
+.dashboard-skeleton__order-legend-item > .dashboard-skeleton__line--short {
+  height: 10px;
+  width: 25px;
+}
+
+.dashboard-skeleton__order-section-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-skeleton__order-section-header .dashboard-skeleton__line {
+  height: 10px;
+}
+
+.dashboard-skeleton__order-section-header
+  .dashboard-skeleton__line:first-child {
+  width: 82px;
+}
+
+.dashboard-skeleton__order-section-header .dashboard-skeleton__line:last-child {
+  width: 96px;
+}
+
+.dashboard-skeleton__order-group-title {
+  height: 9px;
+  width: 70px;
+}
+
+.dashboard-skeleton__order-status .dashboard-skeleton__overview-item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-skeleton__order-status-label .dashboard-skeleton__line {
+  height: 10px;
+  width: 92px;
+}
+
+.dashboard-skeleton__order-status
+  > .dashboard-skeleton__overview-item
+  > .dashboard-skeleton__line--short {
+  height: 10px;
+  width: 24px;
+}
+
+.dashboard-skeleton__order-metric .dashboard-skeleton__line:first-child {
+  height: 10px;
+  width: 90%;
+}
+
+.dashboard-skeleton__order-metric .dashboard-skeleton__line:last-child {
+  height: 11px;
+  width: 72%;
+}
+
+.dashboard-skeleton__order-pagination {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dashboard-skeleton__order-pagination .dashboard-skeleton__block {
+  height: 34px;
+  width: 34px;
+}
+
+.dashboard-skeleton__order-donut {
+  border-width: 17px;
+}
+
+.dashboard-skeleton__order-actions .dashboard-skeleton__block:first-child {
+  width: 58px;
+}
+
+.dashboard-skeleton__order-actions .dashboard-skeleton__block:nth-child(2) {
+  width: 45px;
+}

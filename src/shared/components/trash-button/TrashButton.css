@@ -1,0 +1,42 @@
+.trash-button {
+  align-items: center;
+  background: rgba(from var(--pink) r g b / 0.12);
+  border: none;
+  clip-path: circle(50%);
+  color: rgba(from var(--pink) r g b / 0.6);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 2px;
+  justify-content: center;
+  transition:
+    background 200ms ease,
+    color 200ms ease,
+    gap 300ms;
+}
+
+.trash-button:hover {
+  background: rgba(from var(--pink) r g b / 0.25);
+  color: var(--pink);
+  gap: 0;
+}
+
+.trash-button--disabled,
+.trash-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.trash-button__lid,
+.trash-button__body {
+  transition: transform 500ms;
+}
+
+.trash-button__lid {
+  transform-origin: bottom right;
+}
+
+.trash-button:hover .trash-button__lid {
+  transform: rotate(160deg);
+}

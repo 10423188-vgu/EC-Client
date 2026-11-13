@@ -1,0 +1,124 @@
+.code-input__row {
+  align-items: stretch;
+  background: transparent;
+  border: 1px solid rgba(from var(--cream) r g b / 0.18);
+  border-radius: 6px;
+  display: flex;
+  overflow: hidden;
+  transition:
+    border-color 200ms,
+    box-shadow 200ms;
+}
+
+.code-input__row:focus-within {
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 3px var(--color-focus-ring);
+}
+
+.code-input__row--error {
+  border-color: rgba(from var(--danger) r g b / 0.55);
+}
+
+.code-input__icon {
+  align-self: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  font-size: 14px;
+  margin-left: 14px;
+}
+
+.code-input__field {
+  background: transparent;
+  border: none;
+  color: var(--cream);
+  flex: 1;
+  font-family: inherit;
+  font-size: 14px;
+  min-width: 0;
+  outline: none;
+  padding: 12px 10px;
+}
+
+.code-input__field::placeholder {
+  color: rgba(from var(--cream) r g b / 0.4);
+}
+
+.code-input__field:disabled {
+  opacity: 0.6;
+}
+
+.code-input__submit-button {
+  align-items: center;
+  align-self: stretch;
+  background: linear-gradient(90deg, var(--gradient-cta-sweep-stops));
+  background-position: 0% 50%;
+  background-size: 200% auto;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 6px;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  padding: 0 20px;
+  transition:
+    background-position 400ms ease,
+    padding 250ms ease,
+    box-shadow 250ms ease,
+    filter 150ms ease;
+}
+
+.code-input__submit-button-icon {
+  flex-shrink: 0;
+  font-size: 11px;
+  transition: transform 250ms ease;
+}
+
+.code-input__submit-button:hover:not(:disabled) {
+  background-position: 100% 50%;
+  box-shadow: 0 6px 16px rgba(var(--violet-shadow), 0.45);
+  padding: 0 28px;
+}
+
+.code-input__submit-button:hover:not(:disabled)
+  .code-input__submit-button-icon {
+  transform: translateX(2px) scale(1.15);
+}
+
+.code-input__submit-button:active:not(:disabled) {
+  box-shadow: 0 2px 8px rgba(var(--violet-shadow), 0.35);
+  filter: brightness(0.94);
+}
+
+.code-input__submit-button:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: -4px;
+}
+
+.code-input__submit-button:disabled {
+  background-position: 0% 50%;
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.code-input__error {
+  animation: code-input-fade-in 200ms ease-out;
+  color: var(--danger);
+  display: block;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+@keyframes code-input-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

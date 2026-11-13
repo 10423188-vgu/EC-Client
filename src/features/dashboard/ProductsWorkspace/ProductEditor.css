@@ -1,0 +1,227 @@
+.product-editor {
+  max-height: 90vh;
+}
+
+.product-editor__body {
+  gap: 16px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.product-editor__body section[hidden] {
+  display: none;
+}
+
+.product-editor__form,
+.product-editor__fields {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.product-editor__fields h3 {
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.product-editor label {
+  display: grid;
+  font-size: 12px;
+  gap: 7px;
+  min-width: 0;
+}
+
+.product-editor input:not([type='checkbox']),
+.product-editor textarea {
+  background: var(--color-surface-cream);
+  border: 1px solid var(--color-border-cream);
+  border-radius: 7px;
+  color: var(--color-text);
+  min-width: 0;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.product-editor input:focus-visible,
+.product-editor textarea:focus-visible {
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+  outline: 0;
+}
+
+.product-editor input[aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.product-editor input:disabled,
+.product-editor textarea:disabled {
+  opacity: 0.6;
+}
+
+.product-editor__columns {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.product-editor__inline {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.product-editor__inline input[type='url'] {
+  flex: 1;
+  min-width: 180px;
+}
+
+.product-editor .product-editor__check {
+  align-items: center;
+  display: flex;
+}
+
+.product-editor__check input {
+  accent-color: var(--color-primary);
+}
+
+.product-editor__error {
+  color: var(--danger);
+  font-size: 12px;
+}
+
+.product-editor__gallery {
+  display: grid;
+  gap: 14px;
+}
+
+.product-editor__image-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.product-editor__image-reorder-hint {
+  color: var(--color-text-subtle);
+  font-size: 11px;
+  grid-column: 1 / -1;
+}
+
+.product-editor__image-card {
+  background: var(--color-surface-cream);
+  border: 1px solid var(--color-border-cream);
+  border-radius: 10px;
+  cursor: grab;
+  display: grid;
+  font-size: 12px;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px;
+  transition:
+    border-color 160ms ease,
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.product-editor__image-card:active {
+  cursor: grabbing;
+}
+
+.product-editor__image-card--dragging {
+  opacity: 0.45;
+  transform: scale(0.98);
+}
+
+.product-editor__image-card--drop-target {
+  border-color: var(--color-primary-hover);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+}
+
+.product-editor__image-card img {
+  aspect-ratio: 4 / 3;
+  border-radius: 6px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.product-editor__image-actions,
+.product-editor__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.product-editor__image-actions .panel-button {
+  font-size: 11px;
+  padding: 6px 8px;
+}
+
+.product-editor__variant-list {
+  display: grid;
+  gap: 12px;
+}
+
+.product-editor__variant-row {
+  align-items: center;
+  border: 1px solid var(--color-border-cream);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: space-between;
+  padding: 14px;
+}
+
+.product-editor__variant-row strong {
+  display: block;
+  font-size: 13px;
+}
+
+.product-editor__variant-row small {
+  color: var(--color-text-muted);
+  display: block;
+  font-size: 11px;
+  margin-top: 6px;
+}
+
+.product-editor__variant-form {
+  border: 1px solid var(--color-border-cream);
+  border-radius: 10px;
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+}
+
+.product-editor__history {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.product-editor__history li {
+  border-bottom: 1px solid var(--color-border-cream);
+  display: grid;
+  font-size: 12px;
+  gap: 6px;
+  padding-bottom: 10px;
+}
+
+.product-editor__history small {
+  color: var(--color-text-muted);
+  overflow-wrap: anywhere;
+}
+
+.product-editor__footer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+}
+
+.product-editor__footer > span {
+  color: var(--color-text-muted);
+  font-size: 11px;
+  margin-right: auto;
+}

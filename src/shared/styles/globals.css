@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ─── Base ─────────────────────────────────────────── */
+  --white: white;
+  --black: black;
+
+  /* ─── Typography ───────────────────────────────────────
+     display = brand identity (hero/section headlines, logo) only.
+     body = everything else, incl. all data/forms (inputs already
+     use font-family:inherit, so this covers them for free).
+     mono = exact-read data: order code, account number. */
+  --font-display: 'Chakra Petch', sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --z-local-underlay: -1;
+  --z-local-base: 0;
+  --z-local-raised: 1;
+  --z-local-decoration: 2;
+  --z-local-front: 3;
+  --z-local-media: 5;
+  --z-local-dropdown: 10;
+  --z-local-actions: 20;
+  --z-bulk-actions: 30;
+  --z-scroll-control: 40;
+  --z-compare-bar: 50;
+  --z-header: 100;
+  --z-popover: 200;
+  --z-cart-overlay: 300;
+  --z-cart-drawer: 310;
+  --z-modal: 400;
+  --z-lightbox: 500;
+  --z-toast: 600;
+
+  /* ─── Brand ────────────────────────────────────────── */
+  --purple: #b587e6;
+  --violet: #7c3aed;
+  --magenta: #d169d1;
+  --cream: #f2ece0;
+
+  /* ─── Brand extended ──────────────────────────────── */
+  --violet-strong: #4c1d95;
+  --pink: #f86ca7;
+  --cyan: #60d4fa;
+  --gold: #f59e0b;
+  --lime: #a3e635;
+  --bronze: #cd7f32;
+
+  /* ─── Semantic state ───────────────────────────────── */
+  --danger: #f87171;
+  --danger-strong: #dc2626;
+  --success: #22c55e;
+  --success-strong: #16a34a;
+  --success-light: #4ade80;
+  --warning: #f5c842;
+
+  /* ─── Rating scale ─────────────────────────────────── */
+  --rating-5: var(--gold);
+  --rating-4: #84cc16;
+  --rating-3: #6366f1;
+  --rating-2: #f97316;
+
+  /* ─── Neutral scale ────────────────────────────────── */
+  --gray-100: #f3f4f6;
+  --gray-300: #d1d5db;
+  --gray-400: #94a3b8;
+  --gray-600: #666;
+  --gray-750: #444;
+  --gray-800: #333;
+  --gray-900: #1a1a1a;
+
+  /* ─── Opacity scale — replaces ad-hoc rgba alpha values ─ */
+  --white-04: rgba(255, 255, 255, 0.04);
+  --white-08: rgba(255, 255, 255, 0.08);
+  --white-12: rgba(255, 255, 255, 0.12);
+  --white-20: rgba(255, 255, 255, 0.2);
+  --white-32: rgba(255, 255, 255, 0.32);
+  --white-48: rgba(255, 255, 255, 0.48);
+  --white-56: rgba(255, 255, 255, 0.56);
+  --white-70: rgba(255, 255, 255, 0.7);
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-90: rgba(255, 255, 255, 0.9);
+
+  --black-08: rgba(0, 0, 0, 0.08);
+  --black-12: rgba(0, 0, 0, 0.12);
+  --black-20: rgba(0, 0, 0, 0.2);
+  --black-32: rgba(0, 0, 0, 0.32);
+  --black-48: rgba(0, 0, 0, 0.48);
+  --black-56: rgba(0, 0, 0, 0.56);
+  --black-70: rgba(0, 0, 0, 0.7);
+  --black-90: rgba(0, 0, 0, 0.9);
+
+  /* ─── Base extended — values that were duplicated as raw hex across components ─ */
+  --purple-bright: #c99cf0;
+  --gray-950: #121212;
+  --ink: #111;
+  --surface-1: #1c1c1e;
+  --surface-2: #2a2a2e;
+  --surface-3: #333338;
+  --success-pale: #86efac;
+  --info-strong: #1a6cff;
+  --info-strong-border: #1254cc;
+  --overlay-quick-action: rgba(20, 10, 40, 0.55);
+  --violet-shadow: 100, 40, 160;
+  --overlay-vignette: rgb(11, 11, 13);
+  --overlay-scrim: rgb(8, 6, 14);
+  --surface-0: #161616;
+  --pink-light: #f472b6;
+  --overlay-panel-dark: rgb(12, 6, 30);
+  --gray-cta-shadow: #d2d3d4;
+  --navy-900: #1f2937;
+  --gradient-card-glow: linear-gradient(
+    to right,
+    rgba(150, 120, 210, 0.7) 0%,
+    rgba(170, 155, 230, 0.3) 100%
+  );
+
+  /* ══════════════════════════════════════════════════════════════
+     SEMANTIC TOKENS — components should only consume this layer,
+     never the base tokens/hex above directly (unless noted otherwise).
+     Changing one line here re-colors every dependent part of the UI.
+     ══════════════════════════════════════════════════════════════ */
+
+  /* ─── Primary (neon purple — main CTA, nav hover) ────────── */
+  --color-primary: var(--purple);
+  --color-primary-hover: var(--purple-bright);
+  --color-primary-active: var(--violet-strong);
+  --color-primary-subtle: rgba(from var(--color-primary) r g b / 0.15);
+  --color-primary-subtle-border: rgba(from var(--color-primary) r g b / 0.4);
+  --color-primary-foreground: var(--white);
+  /* Brand gradient color pairs — the angle is a layout concern left to each
+     component; the token only owns the COLOR: linear-gradient(<angle>, var(--gradient-primary-stops)) */
+  --gradient-primary-stops: var(--purple), var(--magenta);
+  --gradient-accent-stops: var(--purple), var(--violet);
+  --gradient-panel-accent-stops: var(--color-accent), transparent;
+  --gradient-cta-sweep-stops: var(--purple), var(--violet), var(--magenta);
+  --gradient-title-accent-stops:
+    var(--purple), var(--magenta), var(--pink-light);
+  --gradient-tier-challenger-stops: var(--cyan), var(--info-strong);
+  --gradient-tier-grandmaster-stops: var(--rating-2), var(--danger-strong);
+  --gradient-tier-diamond-stops: var(--rating-3), var(--cyan);
+  --gradient-tier-emerald-stops: var(--success), var(--success-strong);
+  --gradient-tier-platinum-stops: var(--success-light), var(--cyan);
+  --gradient-tier-gold-stops: var(--rating-5), var(--warning);
+  --gradient-tier-silver-stops: var(--gray-300), var(--gray-400);
+  --gradient-tier-bronze-stops: var(--bronze), var(--rating-2);
+
+  /* ─── Secondary / Accent ───────────────────────────────────────
+     Secondary = magenta, always paired with primary in the brand gradient.
+     Accent = lime, a distinct "selected / filtering" meaning (facet,
+     pagination, sort) — intentionally NOT merged into primary. */
+  --color-secondary: var(--magenta);
+  --color-accent: var(--lime);
+  --color-accent-subtle: rgba(from var(--color-accent) r g b / 0.12);
+  --color-accent-border: rgba(from var(--color-accent) r g b / 0.4);
+  --color-accent-ring: rgba(from var(--color-accent) r g b / 0.35);
+  --color-accent-foreground: var(--ink);
+
+  /* ─── Surface ───────────────────────────────────────────────────
+     "surface" (frosted glass) is for panels/cards floating over the
+     site's background image. "surface-opaque" is for panels that must
+     fully cover what's behind them (modal, dropdown) — two different
+     concepts, kept as separate tokens. */
+  --color-surface: var(--white-04);
+  --color-surface-hover: var(--white-12);
+  --color-surface-cream: rgba(from var(--cream) r g b / 0.04);
+  --color-surface-cream-hover: rgba(from var(--cream) r g b / 0.08);
+  --color-surface-opaque: var(--surface-1);
+  --color-surface-opaque-hover: var(--surface-2);
+  --color-surface-opaque-active: var(--surface-3);
+
+  /* ─── Border ────────────────────────────────────────────────────*/
+  --color-border: var(--white-12);
+  --color-border-hover: var(--white-32);
+  --color-border-cream: rgba(from var(--cream) r g b / 0.12);
+  --color-border-cream-hover: rgba(from var(--cream) r g b / 0.2);
+  --color-scrollbar-thumb: rgba(from var(--color-primary) r g b / 0.56);
+  --color-scrollbar-thumb-hover: rgba(from var(--color-primary) r g b / 0.78);
+  --color-scrollbar-track: transparent;
+  --gradient-scrollbar-thumb-stops:
+    rgba(from var(--color-primary) r g b / 0.62),
+    rgba(from var(--color-secondary) r g b / 0.62);
+  --gradient-scrollbar-thumb-hover-stops:
+    rgba(from var(--color-primary-hover) r g b / 0.9),
+    rgba(from var(--color-secondary) r g b / 0.9);
+  --gradient-scrollbar-border-stops:
+    rgba(from var(--color-primary) r g b / 0.28),
+    rgba(from var(--color-secondary) r g b / 0.4);
+
+  /* ─── Text (on the dark / background-image main theme) ───────────*/
+  --color-text: var(--white);
+  --color-step-text: var(--cream);
+  --color-print-background: var(--white);
+  --color-print-text: var(--black);
+  --color-text-muted: var(--white-56);
+  /* why: white-32 measured ~2.7:1 against the dark theme bg, below WCAG AA (4.5:1)
+     for readable text — white-48 clears AA (~4.9:1) while staying visually
+     weaker than --color-text-muted */
+  --color-text-subtle: var(--white-48);
+  /* Text on surface-opaque (modal/dropdown) — not an alpha overlay */
+  --color-text-on-surface-muted: #cccccc;
+  --color-text-on-surface-subtle: #b3b3b3;
+  /* why: --gradient-card-glow (ProductCard body) is a lighter purple wash, not the
+     near-black page bg — --gray-400/--color-text-muted were tuned for the dark bg
+     and measure ~2.5:1 here (fail AA). This lavender-white clears ~5.4:1. */
+  --color-text-on-glow-muted: #ede9fe;
+
+  /* ─── Pricing ──────────────────────────────────────────────────
+     Regular price = readable text, sale price = gold,
+     payable totals = magenta, crossed-out prices = muted text. */
+  --color-price: var(--color-text);
+  --color-price-sale: var(--gold);
+  --color-price-total: var(--color-secondary);
+  --color-price-original: var(--color-text-subtle);
+
+  /* ─── Focus ─────────────────────────────────────────────────────*/
+  --color-focus: var(--color-primary-hover);
+  --color-focus-ring: rgba(from var(--color-focus) r g b / 0.16);
+
+  /* ─── State ─────────────────────────────────────────────────────
+     Components read the existing --success/--warning/--danger base
+     tokens directly (already self-descriptive) — no unused semantic
+     alias kept here. Only the derived light-bg/foreground pairs below
+     (order status badges etc.) are unique enough to need their own name. */
+  --color-success-subtle-bg: #f0fdf4;
+  --color-success-foreground: #15803d;
+  --color-warning-subtle-bg: #fff7ed;
+  --color-warning-foreground: #c2410c;
+  --color-error-strong: var(--danger-strong);
+  --color-error-subtle-bg: #fef2f2;
+  --color-error-foreground: var(--danger-strong);
+  --color-info: #1d4ed8;
+  --color-info-subtle-bg: #eff6ff;
+  --color-neutral-subtle-bg: #f9fafb;
+  --color-neutral-foreground: #6b7280;
+  /* Light-background order status badge — the "primary" variant on white */
+  --color-primary-subtle-bg: #faf5ff;
+}
+
+* {
+  scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track,
+*::-webkit-scrollbar-corner {
+  background: var(--color-scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(90deg, var(--gradient-scrollbar-thumb-stops)) padding-box,
+    linear-gradient(90deg, var(--gradient-scrollbar-border-stops)) border-box;
+  border: 1px solid transparent;
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background:
+    linear-gradient(90deg, var(--gradient-scrollbar-thumb-hover-stops))
+      padding-box,
+    linear-gradient(90deg, var(--gradient-scrollbar-border-stops)) border-box;
+}
+
+body {
+  background:
+    linear-gradient(var(--black-70), var(--black-70)),
+    url('/images/backgrounds/global.webp') center/cover fixed no-repeat;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+select {
+  color-scheme: dark;
+}
+
+option {
+  background-color: var(--color-surface-opaque);
+  color: var(--color-text);
+}

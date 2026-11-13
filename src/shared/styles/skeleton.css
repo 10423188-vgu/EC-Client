@@ -1,0 +1,39 @@
+.skeleton {
+  animation: skeleton-shimmer 1600ms ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    var(--white-04) 25%,
+    var(--white-12) 50%,
+    var(--white-04) 75%
+  );
+  background-size: 200% 100%;
+  border-radius: 6px;
+}
+
+.skeleton--light {
+  animation: skeleton-shimmer 1600ms ease-in-out infinite;
+  background: linear-gradient(
+    90deg,
+    var(--black-08) 25%,
+    var(--black-12) 50%,
+    var(--black-08) 75%
+  );
+  background-size: 200% 100%;
+  border-radius: 6px;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton,
+  .skeleton--light {
+    animation: none;
+  }
+}

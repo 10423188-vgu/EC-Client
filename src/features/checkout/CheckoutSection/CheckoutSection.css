@@ -1,0 +1,29 @@
+.checkout-section {
+  border-bottom: 1px solid rgba(from var(--cream) r g b / 0.08);
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+
+.checkout-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.checkout-section__title {
+  color: var(--cream);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.checkout-section__empty {
+  color: rgba(from var(--cream) r g b / 0.55);
+  font-size: 14px;
+}
+
+.checkout-section__error {
+  color: var(--danger);
+  font-size: 13px;
+  margin-top: 10px;
+}

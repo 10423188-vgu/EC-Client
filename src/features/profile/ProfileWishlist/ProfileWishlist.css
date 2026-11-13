@@ -1,0 +1,39 @@
+.profile-wishlist {
+  margin: 28px auto 0;
+  max-width: 1280px;
+  padding: 0 16px 40px;
+}
+
+.profile-wishlist__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  margin-bottom: 24px;
+}
+
+.profile-wishlist__actions {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 16px;
+}
+
+.profile-wishlist__count {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.profile-wishlist__empty {
+  align-items: center;
+  color: var(--white-32);
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  gap: 14px;
+  padding: 60px 0;
+}
+
+.profile-wishlist__empty-icon {
+  color: rgba(from var(--color-primary) r g b / 0.4);
+  font-size: 40px;
+}

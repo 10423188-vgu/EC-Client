@@ -1,0 +1,79 @@
+.create-button {
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  color: var(--color-text);
+  cursor: pointer;
+  flex-shrink: 0;
+  height: 40px;
+  padding: 0;
+  position: relative;
+  transition: background 700ms ease;
+  width: 144px;
+}
+
+.create-button:hover,
+.create-button:focus-visible {
+  background: rgba(from var(--color-primary-hover) r g b / 0.1);
+}
+
+.create-button:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.create-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.create-button__border {
+  height: 100%;
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.create-button__shape {
+  fill: transparent;
+  stroke: var(--color-primary-hover);
+  stroke-dasharray: 24 76;
+  stroke-dashoffset: 12;
+  stroke-width: 2px;
+  transition:
+    stroke-width 700ms ease,
+    stroke-dashoffset 700ms ease,
+    stroke-dasharray 700ms ease;
+}
+
+.create-button:hover .create-button__shape,
+.create-button:focus-visible .create-button__shape {
+  stroke-dasharray: 100 0;
+  stroke-dashoffset: 0;
+  stroke-width: 1.5px;
+}
+
+.create-button__label {
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 7px;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+}
+
+.create-button__label svg {
+  color: var(--color-primary-hover);
+  flex-shrink: 0;
+  font-size: 16px;
+  transform-origin: center;
+  transition: transform 350ms ease;
+}
+
+.create-button:hover .create-button__label svg,
+.create-button:focus-visible .create-button__label svg {
+  transform: rotate(90deg) scale(1.12);
+}

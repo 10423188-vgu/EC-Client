@@ -1,0 +1,26 @@
+.product-bulk {
+  display: grid;
+  gap: 10px;
+}
+
+.product-bulk:empty {
+  display: none;
+}
+
+.product-bulk__result {
+  color: var(--color-text-muted);
+  font-size: 12px;
+  margin-bottom: 14px;
+}
+
+.product-bulk__result ul {
+  color: var(--warning);
+  overflow-wrap: anywhere;
+  padding-top: 6px;
+}
+
+.product-bulk__confirmation-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}

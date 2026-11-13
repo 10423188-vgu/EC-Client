@@ -1,0 +1,164 @@
+.key-button {
+  background: transparent;
+  border-bottom: none;
+  border-left: 2px solid rgba(from var(--cream) r g b / 0.4);
+  border-right: 2px solid rgba(from var(--cream) r g b / 0.4);
+  border-top: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 7px 14px;
+  position: relative;
+  transition:
+    background 300ms ease-in-out,
+    border-color 300ms ease-in-out;
+  user-select: none;
+}
+
+.key-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.key-button:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.key-button::before {
+  background: rgba(from var(--cream) r g b / 0.5);
+  content: '';
+  height: 2px;
+  left: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition:
+    background 300ms linear,
+    width 300ms linear;
+  width: 14px;
+}
+
+.key-button__edge {
+  background: rgba(from var(--cream) r g b / 0.4);
+  height: 2px;
+  position: absolute;
+  transition:
+    width 400ms ease-out,
+    background 300ms linear;
+  z-index: var(--z-local-raised);
+}
+
+.key-button__edge--top-a {
+  left: -1px;
+  top: -2px;
+  width: 24px;
+}
+
+.key-button__edge--top-b {
+  left: 48px;
+  right: -2px;
+  top: -2px;
+}
+
+.key-button__edge--bottom-a {
+  bottom: -2px;
+  left: -1px;
+  right: 48px;
+}
+
+.key-button__edge--bottom-b {
+  bottom: -2px;
+  right: -2px;
+  width: 24px;
+}
+
+.key-button__text {
+  color: var(--cream);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-left: 18px;
+  text-transform: uppercase;
+  transition:
+    color 300ms ease-in-out,
+    padding-left 300ms ease-in-out;
+}
+
+.key-button:not(:disabled):hover {
+  background: var(--violet);
+  border-color: var(--violet);
+}
+
+.key-button:not(:disabled):hover::before {
+  background: var(--white);
+  width: 8px;
+}
+
+.key-button:not(:disabled):hover .key-button__edge {
+  background: var(--white);
+}
+
+.key-button:not(:disabled):hover .key-button__edge--top-a,
+.key-button:not(:disabled):hover .key-button__edge--bottom-b {
+  width: 50px;
+}
+
+.key-button:not(:disabled):hover .key-button__text {
+  color: var(--white);
+  padding-left: 14px;
+}
+
+.key-button--lg {
+  display: block;
+  margin-top: 16px;
+  padding: 16px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.key-button--lg::before {
+  display: none;
+}
+
+.key-button--lg .key-button__edge--top-a,
+.key-button--lg .key-button__edge--bottom-b {
+  width: 24px;
+}
+
+.key-button--lg .key-button__edge--top-b {
+  left: 68px;
+}
+
+.key-button--lg .key-button__edge--bottom-a {
+  right: 68px;
+}
+
+.key-button--lg:not(:disabled):hover .key-button__edge--top-a,
+.key-button--lg:not(:disabled):hover .key-button__edge--bottom-b {
+  width: 120px;
+}
+
+.key-button--lg::after {
+  background: linear-gradient(90deg, var(--gradient-accent-stops));
+  content: '';
+  inset: -2px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 400ms ease;
+}
+
+.key-button--lg:not(:disabled):hover::after {
+  opacity: 1;
+}
+
+.key-button--lg .key-button__text {
+  font-size: 15px;
+  padding-left: 0;
+  position: relative;
+  z-index: var(--z-local-decoration);
+}
+
+.key-button--lg:not(:disabled):hover .key-button__text {
+  padding-left: 0;
+}

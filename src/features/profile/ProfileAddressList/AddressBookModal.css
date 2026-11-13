@@ -1,0 +1,77 @@
+.address-book-modal__toolbar {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+}
+
+.address-book-modal__limit {
+  color: var(--white-32);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.address-book-modal__list {
+  display: grid;
+  flex: 1;
+  gap: 16px;
+  grid-template-columns: 1fr;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.address-book-modal__card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.address-book-modal__fields {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.address-book-modal__form-title {
+  color: var(--gray-600);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.address-book-modal__card--new,
+.address-book-modal__card--editing {
+  background: var(--white-04);
+  border: 1px dashed var(--white-12);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.address-book-modal__card-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.address-book-modal__default-button:hover:not(:disabled) .panel-button__icon {
+  color: var(--rating-5);
+}
+
+.address-book-modal__card-footer {
+  animation: address-book-modal-card-footer-in 200ms ease;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+@keyframes address-book-modal-card-footer-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

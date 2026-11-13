@@ -1,0 +1,64 @@
+.select-field {
+  display: inline-grid;
+  max-width: 100%;
+  min-width: 0;
+  position: relative;
+}
+
+.select-field .select-field__control {
+  appearance: none;
+  background: var(--color-surface-cream);
+  border: 1px solid var(--color-border-cream);
+  border-radius: 7px;
+  color: var(--color-text);
+  cursor: pointer;
+  min-height: 38px;
+  min-width: 0;
+  padding: 0 40px 0 12px;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease;
+  width: 100%;
+}
+
+.select-field .select-field__control:hover {
+  background: var(--color-surface-cream-hover);
+  border-color: var(--color-border-cream-hover);
+}
+
+.select-field .select-field__control:focus {
+  background: var(--color-surface-cream-hover);
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+  outline: none;
+}
+
+.select-field .select-field__control option {
+  background: var(--color-surface-opaque);
+  color: var(--color-text);
+}
+
+.select-field__arrow {
+  color: var(--color-text-muted);
+  font-size: 10px;
+  pointer-events: none;
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 180ms ease;
+}
+
+.select-field:has(select:open) .select-field__arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select-field:has(select:disabled) .select-field__arrow {
+  opacity: 0.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .select-field__arrow {
+    transition: none;
+  }
+}

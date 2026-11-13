@@ -1,0 +1,1 @@
+export const HOME_FEATURED_PRODUCT_LIMIT = 10

@@ -1,0 +1,75 @@
+.verification-badge {
+  animation: verification-badge-enter 360ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  color: var(--color-surface-opaque);
+  display: grid;
+  flex: 0 0 32px;
+  height: 32px;
+  place-items: center;
+  position: relative;
+  width: 32px;
+}
+
+.verification-badge--pending {
+  color: var(--color-primary-foreground);
+}
+
+.verification-badge__seal-wrap {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.verification-badge__seal {
+  fill: var(--warning);
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.verification-badge--pending .verification-badge__seal {
+  fill: var(--color-neutral-foreground);
+}
+
+.verification-badge__mark {
+  font-size: 15px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.verification-badge--verified .verification-badge__seal {
+  fill: var(--info-strong);
+  stroke: var(--info-strong);
+  stroke-width: 0.5px;
+}
+
+.verification-badge--verified .verification-badge__mark {
+  color: var(--white);
+  font-size: 18px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+}
+
+@keyframes verification-badge-enter {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .verification-badge {
+    animation: none;
+    transition: none;
+  }
+}

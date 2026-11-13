@@ -1,0 +1,253 @@
+.auth-card {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.auth-card__card {
+  background: var(--white);
+  border: 3px solid var(--magenta);
+  box-shadow: 8px 8px 0 var(--magenta);
+  color: var(--black);
+  max-width: 400px;
+  padding: 40px;
+  transition:
+    box-shadow 200ms ease,
+    transform 200ms ease;
+  width: 100%;
+}
+
+.auth-card__card:hover {
+  box-shadow: 10px 10px 0 var(--magenta);
+  transform: translate(-2px, -2px);
+}
+
+.auth-card__header {
+  text-align: center;
+}
+
+.auth-card__title {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.auth-card__subtitle {
+  color: var(--gray-600);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.auth-card__body {
+  margin-top: 32px;
+}
+
+.auth-card__field {
+  margin-top: 24px;
+}
+
+.auth-card__label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.auth-card__input-group {
+  border: 2px solid var(--black);
+  margin-top: 8px;
+  position: relative;
+}
+
+.auth-card__input-group:focus-within {
+  box-shadow: 4px 4px 0 var(--black);
+  transform: translate(-2px, -2px);
+}
+
+.auth-card__input-group--password {
+  align-items: center;
+  display: flex;
+}
+
+.auth-card__input {
+  border: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  padding: 12px 16px;
+  width: 100%;
+}
+
+.auth-card__input::placeholder {
+  color: var(--gray-600);
+}
+
+.auth-card__error {
+  animation: auth-card-error-slide-down 200ms ease forwards;
+  color: var(--color-error-strong);
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-left: 2px;
+  margin-top: 6px;
+  text-transform: uppercase;
+}
+
+.auth-card__toggle {
+  background: var(--black);
+  border: none;
+  bottom: 0;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0 12px;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+  top: 0;
+  transition: background 200ms ease;
+}
+
+.auth-card__toggle:hover {
+  background: var(--gray-800);
+}
+
+.auth-card__toggle:active {
+  transform: scale(0.98);
+}
+
+.auth-card__toggle-label {
+  pointer-events: none;
+}
+
+.auth-card__submit-button {
+  background: var(--black);
+  border: 2px solid var(--black);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 28px;
+  overflow: hidden;
+  padding: 16px;
+  position: relative;
+  text-transform: uppercase;
+  transition:
+    background 200ms ease,
+    box-shadow 200ms ease,
+    transform 200ms ease;
+  width: 100%;
+}
+
+.auth-card__submit-button:hover {
+  background: var(--gray-800);
+  box-shadow: 4px 4px 0 var(--black);
+  transform: translate(-2px, -2px);
+}
+
+.auth-card__submit-button:active {
+  box-shadow: 2px 2px 0 var(--black);
+  transform: translate(0, 0);
+}
+
+.auth-card__submit-button-label {
+  position: relative;
+  transition: opacity 200ms ease;
+  z-index: var(--z-local-raised);
+}
+
+.auth-card__loader {
+  display: flex;
+  gap: 3px;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 200ms ease;
+}
+
+.auth-card__loader-bar {
+  animation: auth-card-loader-pulse 1000ms ease-in-out infinite;
+  background: var(--white);
+  height: 16px;
+  width: 3px;
+}
+
+.auth-card__loader-bar:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.auth-card__loader-bar:nth-child(3) {
+  animation-delay: 400ms;
+}
+
+.auth-card__submit-button--loading .auth-card__submit-button-label {
+  opacity: 0;
+}
+
+.auth-card__submit-button--loading .auth-card__loader {
+  opacity: 1;
+}
+
+.auth-card__prompt {
+  color: var(--gray-600);
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 24px;
+  text-align: center;
+}
+
+.auth-card__link {
+  border-bottom: 2px solid transparent;
+  color: var(--black);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: border-color 200ms ease;
+}
+
+.auth-card__link:hover {
+  border-bottom-color: var(--black);
+}
+
+.auth-card__message {
+  color: var(--black);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@keyframes auth-card-loader-pulse {
+  0%,
+  80%,
+  100% {
+    opacity: 0.5;
+    transform: scaleY(0.5);
+  }
+  40% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes auth-card-error-slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

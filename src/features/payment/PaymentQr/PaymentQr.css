@@ -1,0 +1,235 @@
+.payment-qr--empty {
+  color: rgba(from var(--cream) r g b / 0.65);
+  flex-direction: column;
+  font-size: 15px;
+  gap: 12px;
+  text-align: center;
+}
+
+.payment-qr--empty .retry-button {
+  margin-top: 0;
+}
+
+.payment-qr--empty .payment-qr__link {
+  align-self: center;
+  color: var(--magenta);
+  text-decoration: underline;
+}
+
+.payment-qr__card {
+  max-width: 400px;
+  padding: 40px;
+}
+
+.payment-qr__loading-amount {
+  height: 26px;
+  margin: 0 auto;
+  width: 155px;
+}
+
+.payment-qr__code.payment-qr__loading-code {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.payment-qr__loading-code > span {
+  display: block;
+  height: 150px;
+  width: 150px;
+}
+
+.payment-qr__loading-bank-value {
+  height: 15px;
+  width: 105px;
+}
+
+.payment-qr__loading-status {
+  height: 16px;
+  width: 200px;
+}
+
+.payment-qr__loading-status--short {
+  height: 14px;
+  width: 130px;
+}
+
+.payment-qr__loading-action {
+  display: block;
+  height: 38px;
+  width: 100%;
+}
+
+.payment-qr__title {
+  color: var(--cream);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.payment-qr__subtitle {
+  color: rgba(from var(--cream) r g b / 0.6);
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.payment-qr__refresh-error {
+  color: var(--danger);
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  margin-bottom: 20px;
+  padding: 12px;
+}
+
+.payment-qr__refresh-error .retry-button {
+  margin-top: 0;
+}
+
+.payment-qr__refresh-error p {
+  margin: 0;
+}
+
+.payment-qr__notice {
+  margin-bottom: 20px;
+  padding: 8px 14px;
+}
+
+.payment-qr__notice-title {
+  color: var(--warning);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.payment-qr__notice-body {
+  color: rgba(from var(--cream) r g b / 0.75);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.payment-qr__amount {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.payment-qr__amount-label {
+  color: rgba(from var(--cream) r g b / 0.55);
+  font-size: 12px;
+}
+
+.payment-qr__amount-value {
+  color: var(--color-price-total);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.payment-qr__code {
+  background: var(--white);
+  border-radius: 12px;
+  display: block;
+  height: 220px;
+  margin: 0 auto 20px;
+  object-fit: contain;
+  padding: 12px;
+  width: 220px;
+}
+
+.payment-qr__bank-info {
+  background: rgba(from var(--cream) r g b / 0.05);
+  border: 1px solid rgba(from var(--cream) r g b / 0.1);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.payment-qr__bank-row {
+  display: flex;
+  font-size: 13px;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.payment-qr__bank-row:not(:last-child) {
+  border-bottom: 1px solid rgba(from var(--cream) r g b / 0.08);
+}
+
+.payment-qr__bank-row dt {
+  color: rgba(from var(--cream) r g b / 0.55);
+}
+
+.payment-qr__bank-row dd {
+  color: var(--cream);
+  font-weight: 600;
+  text-align: right;
+}
+
+.payment-qr__account-number {
+  font-family: var(--font-mono);
+}
+
+.payment-qr__transfer-content {
+  color: var(--magenta);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.payment-qr__hint {
+  color: rgba(from var(--cream) r g b / 0.45);
+  font-size: 11px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.payment-qr__hint strong {
+  color: rgba(from var(--cream) r g b / 0.6);
+  font-weight: 600;
+}
+
+.payment-qr__status {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.payment-qr__status-main {
+  align-items: center;
+  color: rgba(from var(--cream) r g b / 0.7);
+  display: flex;
+  font-size: 13px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.payment-qr__status-description {
+  color: rgba(from var(--cream) r g b / 0.45);
+  font-size: 12px;
+}
+
+.payment-qr__spinner {
+  animation: payment-qr-spin 800ms linear infinite;
+  border: 2px solid rgba(from var(--cream) r g b / 0.24);
+  border-radius: 50%;
+  border-top-color: var(--purple);
+  height: 14px;
+  width: 14px;
+}
+
+.payment-qr__card > .panel-button {
+  justify-content: center;
+  width: 100%;
+}
+
+@keyframes payment-qr-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,103 @@
+.address-card {
+  background: rgba(from var(--purple) r g b / 0.04);
+  border: 1px solid rgba(from var(--purple) r g b / 0.15);
+  border-radius: 14px;
+  display: flex;
+  overflow: hidden;
+  transition:
+    border-color 200ms,
+    box-shadow 200ms;
+}
+
+.address-card:hover {
+  border-color: rgba(from var(--purple) r g b / 0.3);
+  box-shadow: 0 4px 24px rgba(from var(--purple) r g b / 0.08);
+}
+
+.address-card__accent {
+  background: linear-gradient(180deg, var(--purple), var(--magenta));
+  flex-shrink: 0;
+  width: 3px;
+}
+
+.address-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 20px;
+}
+
+.address-card__label {
+  align-items: center;
+  color: var(--purple);
+  display: flex;
+  font-size: 10px;
+  font-weight: 700;
+  gap: 5px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.address-card__label-icon {
+  font-size: 12px;
+}
+
+.address-card__row {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.address-card__chip {
+  align-items: center;
+  color: var(--white-80);
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 600;
+  gap: 5px;
+}
+
+.address-card__chip-icon {
+  color: var(--white-32);
+  font-size: 14px;
+}
+
+.address-card__separator {
+  background: var(--white-12);
+  flex-shrink: 0;
+  height: 14px;
+  width: 1px;
+}
+
+.address-card__location {
+  color: var(--white-48);
+  display: flex;
+  font-size: 14px;
+  gap: 6px;
+  line-height: 1.5;
+}
+
+.address-card__pin {
+  color: var(--purple);
+  flex-shrink: 0;
+  font-size: 14px;
+  margin-top: 1px;
+}
+
+.address-card--empty {
+  align-items: center;
+  background: var(--white-04);
+  border: 1px dashed var(--white-08);
+  border-radius: 14px;
+  color: var(--white-20);
+  display: flex;
+  font-size: 14px;
+  font-style: italic;
+  gap: 10px;
+  padding: 16px 20px;
+}
+
+.address-card__empty-icon {
+  color: var(--white-12);
+  font-size: 16px;
+}

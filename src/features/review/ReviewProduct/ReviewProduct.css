@@ -1,0 +1,138 @@
+.review-product {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.review-product__title {
+  color: var(--white);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.review-product__layout {
+  align-items: start;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 280px 1fr;
+}
+
+.review-product__left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 24px;
+}
+
+.review-product__cta {
+  background: var(--white-04);
+  border: 1px solid var(--white-08);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px;
+}
+
+.review-product__cta-text {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.review-product__cta-description {
+  color: var(--white-32);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0 0 6px;
+}
+
+.review-product__write-button {
+  background: var(--white-04);
+  border: 1px solid var(--white-20);
+  border-radius: 8px;
+  color: var(--white-80);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  text-align: center;
+  transition:
+    background 150ms,
+    border-color 150ms,
+    color 150ms;
+}
+
+.review-product__write-button:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-hover);
+  color: var(--white);
+}
+
+.review-product__right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.review-product__controls {
+  align-items: center;
+  border-bottom: 1px solid var(--white-08);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  padding-bottom: 14px;
+}
+
+.review-product__filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.review-product__chip {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 12px;
+  transition: background 150ms;
+}
+
+.review-product__chip--active {
+  background: rgba(from var(--danger) r g b / 0.1);
+  border-color: rgba(from var(--danger) r g b / 0.3);
+  color: var(--danger);
+}
+
+.review-product__chip--active:hover {
+  background: rgba(from var(--danger) r g b / 0.18);
+}
+
+.review-product__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.review-product__state {
+  color: var(--white-32);
+  font-size: 13px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.review-product__state--error {
+  color: var(--danger);
+}
+
+.review-product__pagination {
+  padding-top: 8px;
+}

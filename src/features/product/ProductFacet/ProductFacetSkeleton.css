@@ -1,0 +1,40 @@
+.product-facet-skeleton__category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-facet-skeleton__category-item {
+  border-radius: 8px;
+  height: 34px;
+}
+
+.product-facet-skeleton__price {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-facet-skeleton__track {
+  border-radius: 999px;
+  height: 4px;
+  margin: 10px 0;
+}
+
+.product-facet-skeleton__inputs {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.product-facet-skeleton__input {
+  border-radius: 8px;
+  flex: 1;
+  height: 36px;
+}
+
+.product-facet-skeleton__price-separator {
+  border-radius: 3px;
+  height: 12px;
+  width: 18px;
+}

@@ -1,0 +1,5 @@
+export { default as ProfileHero } from './ProfileHero'
+export { default as ProfileAbout } from './ProfileAbout'
+export { default as ProfileTabs } from './ProfileTabs'
+export { default as ProfileWishlist } from './ProfileWishlist'
+export { default as ProfileSecurity } from './ProfileSecurity'

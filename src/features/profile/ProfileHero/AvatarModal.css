@@ -1,0 +1,148 @@
+.avatar-modal__tabs {
+  --sliding-tabs-font-size: 13px;
+  --sliding-tabs-padding: 10px 16px;
+  flex-shrink: 0;
+}
+
+.avatar-modal__footer {
+  display: flex;
+  flex-shrink: 0;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.avatar-modal__frame-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  max-height: min(380px, 50vh);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+@property --avatar-modal-frame-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: '<angle>';
+}
+
+.avatar-modal__frame-option {
+  align-items: center;
+  background: var(--white-04);
+  border: 1px solid transparent;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 8px;
+  --avatar-modal-tier-stops: var(--gradient-primary-stops);
+  --avatar-modal-tier-close: var(--purple);
+  --avatar-modal-tier-ring: var(--color-primary-subtle-border);
+}
+
+.avatar-modal__frame-option--challenger {
+  --avatar-modal-tier-stops: var(--gradient-tier-challenger-stops);
+  --avatar-modal-tier-close: var(--cyan);
+  --avatar-modal-tier-ring: rgba(from var(--cyan) r g b / 0.45);
+}
+
+.avatar-modal__frame-option--grandmaster {
+  --avatar-modal-tier-stops: var(--gradient-tier-grandmaster-stops);
+  --avatar-modal-tier-close: var(--rating-2);
+  --avatar-modal-tier-ring: rgba(from var(--danger-strong) r g b / 0.4);
+}
+
+.avatar-modal__frame-option--diamond {
+  --avatar-modal-tier-stops: var(--gradient-tier-diamond-stops);
+  --avatar-modal-tier-close: var(--rating-3);
+  --avatar-modal-tier-ring: rgba(from var(--rating-3) r g b / 0.4);
+}
+
+.avatar-modal__frame-option--emerald {
+  --avatar-modal-tier-stops: var(--gradient-tier-emerald-stops);
+  --avatar-modal-tier-close: var(--success);
+  --avatar-modal-tier-ring: rgba(from var(--success) r g b / 0.4);
+}
+
+.avatar-modal__frame-option--platinum {
+  --avatar-modal-tier-stops: var(--gradient-tier-platinum-stops);
+  --avatar-modal-tier-close: var(--success-light);
+  --avatar-modal-tier-ring: rgba(from var(--success-light) r g b / 0.4);
+}
+
+.avatar-modal__frame-option--gold {
+  --avatar-modal-tier-stops: var(--gradient-tier-gold-stops);
+  --avatar-modal-tier-close: var(--rating-5);
+  --avatar-modal-tier-ring: rgba(from var(--rating-5) r g b / 0.4);
+}
+
+.avatar-modal__frame-option--silver {
+  --avatar-modal-tier-stops: var(--gradient-tier-silver-stops);
+  --avatar-modal-tier-close: var(--gray-300);
+  --avatar-modal-tier-ring: rgba(from var(--gray-300) r g b / 0.35);
+}
+
+.avatar-modal__frame-option--bronze {
+  --avatar-modal-tier-stops: var(--gradient-tier-bronze-stops);
+  --avatar-modal-tier-close: var(--bronze);
+  --avatar-modal-tier-ring: rgba(from var(--bronze) r g b / 0.4);
+}
+
+.avatar-modal__frame-option:not(.avatar-modal__frame-option--selected):hover {
+  animation: avatar-modal-frame-spin 1400ms linear infinite;
+  background-clip: padding-box, border-box;
+  background-color: transparent;
+  background-image:
+    linear-gradient(var(--color-surface-opaque), var(--color-surface-opaque)),
+    conic-gradient(
+      from var(--avatar-modal-frame-angle),
+      transparent 0%,
+      transparent 80%,
+      var(--avatar-modal-tier-stops),
+      transparent 100%
+    );
+  background-origin: border-box;
+}
+
+.avatar-modal__frame-option--selected {
+  animation: avatar-modal-frame-spin 3000ms linear infinite;
+  background-clip: padding-box, border-box;
+  background-color: transparent;
+  background-image:
+    linear-gradient(
+      var(--color-surface-opaque-hover),
+      var(--color-surface-opaque-hover)
+    ),
+    conic-gradient(
+      from var(--avatar-modal-frame-angle),
+      var(--avatar-modal-tier-stops),
+      var(--avatar-modal-tier-close)
+    );
+  background-origin: border-box;
+  box-shadow: 0 0 12px var(--avatar-modal-tier-ring);
+}
+
+@keyframes avatar-modal-frame-spin {
+  to {
+    --avatar-modal-frame-angle: 360deg;
+  }
+}
+
+.avatar-modal__frame-image {
+  height: 64px;
+  object-fit: contain;
+  width: 64px;
+}
+
+.avatar-modal__frame-label {
+  color: var(--color-text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.avatar-modal__frame-option--selected .avatar-modal__frame-label {
+  color: var(--color-primary-foreground);
+}

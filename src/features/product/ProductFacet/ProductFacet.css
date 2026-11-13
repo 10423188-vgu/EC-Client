@@ -1,0 +1,247 @@
+.product-facet {
+  align-self: flex-start;
+  background: var(--color-surface-cream);
+  border: 1px solid var(--color-border-cream);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+  padding: 20px;
+  transition:
+    width 300ms ease,
+    opacity 300ms ease,
+    padding 300ms ease,
+    border-width 300ms ease;
+  width: 280px;
+}
+
+.product-facet--hidden {
+  border-width: 0;
+  opacity: 0;
+  padding: 0;
+  pointer-events: none;
+  width: 0;
+}
+
+.product-facet__title {
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.product-facet__section {
+  border-top: 1px solid var(--color-border-cream);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 16px;
+}
+
+.product-facet__section-title {
+  color: var(--white-48);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.product-facet__error {
+  display: grid;
+  justify-items: start;
+}
+
+.product-facet__error p {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.product-facet__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-facet__category-button {
+  align-items: center;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: var(--white-70);
+  cursor: pointer;
+  display: flex;
+  font-size: 13px;
+  justify-content: space-between;
+  padding: 7px 10px;
+  transition:
+    background 150ms,
+    color 150ms,
+    border-color 150ms;
+  width: 100%;
+}
+
+.product-facet__category-button:hover {
+  background: var(--color-surface-cream-hover);
+  color: white;
+}
+
+.product-facet__category-button--active {
+  background: var(--color-accent-subtle);
+  border-color: var(--color-accent-border);
+  color: var(--color-accent);
+}
+
+.product-facet__category-label-group {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.product-facet__category-indicator {
+  align-items: center;
+  border: 1.5px solid var(--white-20);
+  border-radius: 3px;
+  display: flex;
+  height: 14px;
+  justify-content: center;
+  transition:
+    background 150ms,
+    border-color 150ms;
+  width: 14px;
+}
+
+.product-facet__category-button--active .product-facet__category-indicator {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.product-facet__category-indicator-icon {
+  color: var(--color-accent-foreground);
+  font-size: 8px;
+}
+
+.product-facet__slider {
+  align-items: center;
+  display: flex;
+  height: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.product-facet__slider-track {
+  background: var(--white-12);
+  border-radius: 9999px;
+  flex-grow: 1;
+  height: 4px;
+  position: relative;
+}
+
+.product-facet__slider-range {
+  background: var(--color-accent);
+  height: 100%;
+  position: absolute;
+}
+
+.product-facet__slider-thumb {
+  background: var(--color-accent-foreground);
+  border: 2.5px solid var(--color-accent);
+  border-radius: 50%;
+  cursor: grab;
+  display: block;
+  height: 18px;
+  outline: none;
+  transition:
+    border-color 200ms,
+    transform 150ms,
+    box-shadow 200ms;
+  width: 18px;
+}
+
+.product-facet__slider-thumb:hover {
+  border-color: var(--white);
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+.product-facet__slider-thumb:focus-visible {
+  border-color: var(--white);
+  box-shadow: 0 0 0 3px var(--color-accent-ring);
+  z-index: 1;
+}
+
+.product-facet__slider-thumb:active {
+  cursor: grabbing;
+  z-index: 1;
+}
+
+.product-facet__slider-thumb:hover .product-facet__slider-value,
+.product-facet__slider-thumb:focus-visible .product-facet__slider-value,
+.product-facet__slider-thumb:active .product-facet__slider-value {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.product-facet__slider-value {
+  background: var(--color-surface-opaque);
+  border: 1px solid var(--color-accent-border);
+  border-radius: 6px;
+  bottom: calc(100% + 8px);
+  color: var(--color-text);
+  font-size: 11px;
+  font-weight: 700;
+  left: 50%;
+  opacity: 0;
+  padding: 5px 7px;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-50%) translateY(3px);
+  transition:
+    opacity 120ms ease,
+    transform 120ms ease;
+  white-space: nowrap;
+}
+
+.product-facet__price-inputs {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.product-facet__price-field {
+  align-items: center;
+  background: var(--color-surface-cream);
+  border: 1px solid var(--color-border-cream);
+  border-radius: 10px;
+  display: flex;
+  gap: 4px;
+  padding: 7px 10px;
+  transition: border-color 200ms;
+}
+
+.product-facet__price-field:focus-within {
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+}
+
+.product-facet__price-currency {
+  color: var(--white-32);
+  font-size: 11px;
+}
+
+.product-facet__price-field input {
+  background: none;
+  border: none;
+  color: white;
+  font-family: inherit;
+  font-size: 12px;
+  min-width: 0;
+  outline: none;
+  width: 100%;
+}
+
+.product-facet__price-separator {
+  color: var(--white-32);
+  font-size: 11px;
+  white-space: nowrap;
+}

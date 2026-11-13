@@ -1,0 +1,20 @@
+.profile-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px 0;
+}
+
+.profile-address-list__header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-address-list__title {
+  color: var(--gray-600);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}

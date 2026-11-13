@@ -1,0 +1,63 @@
+.compare-button {
+  --clr: var(--info-strong);
+  background-color: var(--white);
+  border: 1px solid var(--info-strong-border);
+  border-radius: 6px;
+  color: var(--gray-950);
+  cursor: pointer;
+  display: inline-flex;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.compare-button__decor {
+  background-color: var(--clr);
+  inset: 0;
+  position: absolute;
+  transform: translateX(-100%);
+  transition: transform 300ms ease;
+  z-index: var(--z-local-base);
+}
+
+.compare-button__content {
+  align-items: center;
+  display: flex;
+  font-size: 13px;
+  font-weight: 600;
+  position: relative;
+  z-index: var(--z-local-raised);
+}
+
+.compare-button__icon {
+  background-color: var(--clr);
+  color: var(--white);
+  display: grid;
+  flex-shrink: 0;
+  height: 100%;
+  place-items: center;
+  width: 39px;
+}
+
+.compare-button__text {
+  padding: 0 20px 0 12px;
+  transition: color 200ms ease;
+  white-space: nowrap;
+}
+
+.compare-button:not(.compare-button--disabled):hover .compare-button__decor {
+  transform: translateX(0);
+}
+
+.compare-button:not(.compare-button--disabled):hover .compare-button__text {
+  color: var(--white);
+}
+
+.compare-button:not(.compare-button--disabled):active {
+  transform: scale(0.97);
+}
+
+.compare-button--disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}

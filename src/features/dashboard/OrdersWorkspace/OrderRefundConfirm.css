@@ -1,0 +1,74 @@
+.order-refund-confirm {
+  display: grid;
+  gap: 14px;
+}
+
+.order-refund-confirm__eyebrow {
+  color: var(--color-text-on-surface-subtle);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.order-refund-confirm__available {
+  align-items: center;
+  color: var(--color-text-on-surface-muted);
+  display: flex;
+  font-size: 12px;
+  justify-content: space-between;
+}
+
+.order-refund-confirm__available strong {
+  color: var(--color-text);
+  font-family: var(--font-mono);
+}
+
+.order-refund-confirm__field {
+  display: grid;
+  gap: 7px;
+}
+
+.order-refund-confirm__field span {
+  color: var(--color-text-on-surface-muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.order-refund-confirm__field input,
+.order-refund-confirm__field textarea {
+  background: var(--color-surface-cream);
+  border: 1px solid var(--color-border-cream);
+  border-radius: 8px;
+  color: var(--color-text);
+  font: inherit;
+  font-size: 12px;
+  outline: 0;
+  padding: 10px;
+}
+
+.order-refund-confirm__field textarea {
+  min-height: 76px;
+  resize: vertical;
+}
+
+.order-refund-confirm__field input:focus,
+.order-refund-confirm__field textarea:focus {
+  border-color: var(--color-focus);
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
+}
+
+.order-refund-confirm__notice {
+  background: var(--color-surface-cream);
+  border: 1px solid var(--color-border-cream);
+  border-radius: 8px;
+  color: var(--color-text-on-surface-muted);
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+.order-refund-confirm__actions {
+  display: flex;
+  gap: 9px;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
